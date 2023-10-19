@@ -1,0 +1,9 @@
+.idea/
+venv/
+media/
+static/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
