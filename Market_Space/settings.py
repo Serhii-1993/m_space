@@ -14,6 +14,8 @@ from pathlib import Path
 
 import rest_framework.permissions
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -131,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.User'
 
-LOGIN_REDIRECT_URL = '/auth/users/me/'
+LOGIN_REDIRECT_URL = '/board'
 
 
 REST_FRAMEWORK = {
@@ -149,5 +151,7 @@ DJOSER = {
 
     'USER_CREATE_PASSWORD_RETYPE': True,
 
-    'SERIALIZERS': {}
+    'SERIALIZERS': {
+        'current_user': 'user.serializers.UserDetailSerializer',
+    }
 }
