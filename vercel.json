@@ -6,13 +6,13 @@
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
-        "runtime": "python3.10"
-      }
-    },
-    {
-      "src": "static",
-      "use": "@vercel/static",
-
+        "runtime": "python3.9"
+      },
+      "postbuild": [
+        {
+          "command": "pip install -r requirements.txt"
+        }
+      ]
     }
   ]
 }
