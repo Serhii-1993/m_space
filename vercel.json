@@ -1,8 +1,4 @@
-{
-  "app": {
-    "build": {
-      "target": "npm run build"
-    }
+
   },
   "framework": "django",
   "node_modules": ".next",
