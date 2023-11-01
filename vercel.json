@@ -1,9 +1,0 @@
-
-  },
-  "framework": "django",
-  "node_modules": ".next",
-  "database": {
-    "type": "sqlite3",
-    "file": "db.sqlite3"
-  }
-}
