@@ -1,18 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
-      },
-      "postbuild": [
-        {
-          "command": "pip install -r requirements.txt"
-        }
-      ]
+  "app": {
+    "build": {
+      "target": "npm run build"
     }
-  ]
+  },
+  "framework": "django",
+  "node_modules": ".next",
+  "database": {
+    "type": "sqlite3",
+    "file": "db.sqlite3"
+  }
 }
